@@ -1,0 +1,66 @@
+<html lang="id">
+<head>
+    <title>MyPrasmul - Login</title>
+    <style>
+        html, body { height: 100%; }
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+        .card {
+            width: 100%;
+            max-width: 420px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+            padding: 24px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        form { display: flex; flex-direction: column; gap: 12px; margin-top: 8px; }
+        label { display: block; text-align: left; font-weight: 600; margin-bottom: 6px; }
+        input[type="email"], input[type="password"] { width: 100%; padding: 10px; border: 1px solid #d1d5db; border-radius: 6px; }
+        .row { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+        .actions { display:flex; justify-content:space-between; align-items:center; gap:12px; }
+        button { background:#0b5fff; color:#fff; border:none; padding:10px 16px; border-radius:6px; cursor:pointer; }
+        a { color:#0b5fff; text-decoration:none; }
+        .small { font-size:0.9rem; color:#374151; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Welcome</h1>
+        <p class="small">Please enter your login credentials</p>
+
+        <form action="" method="post">
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="user_email" value="" required>
+            </div>
+
+            <div>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="user_password" required>
+            </div>
+
+            <div class="row">
+                <label style="display:flex;align-items:center;gap:8px;font-weight:400;">
+                    <input type="checkbox" id="robot" name="robot" required>
+                    <span>I am not a robot</span>
+                </label>
+                <a href="https://myprasmul.prasetiyamulya.ac.id/auth/forgot-password/">Forgot Password?</a>
+            </div>
+
+            <div class="actions">
+                <a href="https://myprasmul.prasetiyamulya.ac.id/auth/login/">Back</a>
+                <button type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
